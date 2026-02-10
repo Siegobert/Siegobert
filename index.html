@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospitality Expertise | Siegobert Jansen</title>
+  <meta name="description" content="Siegobert Jansen — hospitality manager met passie voor sales, sourcing, contractonderhandelingen en wine & beer." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --panel:rgba(255,255,255,.05);
+      --line:rgba(255,255,255,.10);
+      --text:#e6e8ee;
+      --muted:#a7afc2;
+      --brand:#7c8cff;
+      --brand2:#4fd1c5;
+      --radius:18px;
+      --max:1080px;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% -10%, rgba(124,140,255,.35), transparent 55%),
+        radial-gradient(900px 600px at 90% 10%, rgba(79,209,197,.20), transparent 55%),
+        linear-gradient(180deg, var(--bg), #070b14 60%);
+    }
+    a{color:inherit}
+    header{
+      position:sticky; top:0; z-index:5;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .bar{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.2px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: 0 0 0 5px rgba(124,140,255,.12);
+    }
+    nav{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      text-decoration:none; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid transparent;
+    }
+    nav a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.04)}
+    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 70px;}
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .pad{padding:26px}
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height:1.05;
+      letter-spacing:-.7px;
+    }
+    h2{margin:0 0 10px; font-size:24px; letter-spacing:-.3px}
+    .lead{margin:0 0 18px; color:var(--muted); font-size:16px; line-height:1.65}
+    .muted{color:var(--muted); line-height:1.65}
+    .hero{
+      margin-top:18px;
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
+      align-items:stretch;
+    }
+    .photo{
+      min-height:320px;
+      background:
+        linear-gradient(180deg, rgba(7,11,20,.08), rgba(7,11,20,.78)),
+        url("images/portfolio.jpg");
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+    .badge{
+      position:absolute; left:18px; right:18px; bottom:18px;
+      background: rgba(7,11,20,.62);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 14px;
+    }
+    .badge strong{display:block; font-size:14px}
+    .badge span{display:block; color:var(--muted); font-size:13px; margin-top:4px; line-height:1.35}
+    .actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px; border-radius:12px;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:800;
+    }
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#081021;
+    }
+    .btn:hover{filter:brightness(1.05)}
+    .grid3{display:grid; grid-template-columns:repeat(3, 1fr); gap:14px}
+    .mini{
+      background: rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+    }
+    .mini p{margin:6px 0 0; color:var(--muted); line-height:1.55; font-size:14px}
+    footer{
+      margin-top:26px;
+      padding-top:18px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      display:flex; gap:14px; flex-wrap:wrap;
+      align-items:center; justify-content:space-between;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .photo{min-height:260px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <span>HOSPITALITY Expertise</span>
+      </div>
+      <nav>
+        <a href="#about">Over</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#tagline">Tagline</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <section class="card pad" id="about">
+        <h1>Alles is onmogelijk, als je maar wilt!</h1>
+        <p class="lead"><strong>Hey, You Magnificent Creature!</strong></p>
+
+        <p class="lead">
+          Hey there!<br><br>
+          I'm Siegobert Jansen, a hospitality manager with a passion for sales, sourcing the best deals and negotiating contracts and all things wine&beer.
+          With over 30 years of experience in the industry, I have honed my skills in managing teams, driving sales, and curating the perfect wine selection
+          for <strong>#metdeflesoptafel</strong>.
+        </p>
+
+        <p class="lead">
+          My journey in the hospitality industry started as a youngster, but I quickly climbed the ladder to become a entrepreneur.
+          I have worked in various settings and have always strived to provide an exceptional experience for my guests.
+        </p>
+
+        <p class="lead">
+          As a sales manager, I have a proven track record of exceeding targets and building strong relationships with clients and stakeholders.
+          I believe that understanding their needs and providing personalized solutions is the key to success in sales.
+        </p>
+
+        <p class="lead">
+          Being a wine&beer enthusiast, I have a deep understanding of the industry and keep up with the latest trends and developments.
+        </p>
+
+        <p class="lead">
+          I am a natural leader and thrive in fast-paced, dynamic environments. I am always looking for new challenges and opportunities to grow both personally and professionally.
+          I am a firm believer in continuous learning and am always open to new ideas and perspectives.
+        </p>
+
+        <p class="lead">
+          Aside from my professional achievements, I am a team player and enjoy collaborating with cross-functional teams to achieve common goals.
+          I strongly believe that a supportive and positive work environment is crucial for personal and professional growth.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="#expertise">Bekijk expertise</a>
+          <a class="btn" href="#tagline">Tagline</a>
+        </div>
+      </section>
+
+      <aside class="card photo" aria-label="Portfolio afbeelding">
+        <div class="badge">
+          <strong>Afbeelding los van Uncody</strong>
+          <span>Upload je eigen foto als <em>images/portfolio.jpg</em>.</span>
+        </div>
+      </aside>
+    </div>
+
+    <section id="expertise" style="margin-top:18px">
+      <div class="grid3">
+        <div class="mini">
+          <h3>Hospitality</h3>
+          <p>Teams aansturen, gastbeleving finetunen, operatie laten lopen zonder dat iemand het “operatie” noemt.</p>
+        </div>
+        <div class="mini">
+          <h3>Sales</h3>
+          <p>Relaties bouwen, targets halen, oplossingen maken die logisch zijn en toch verkopen.</p>
+        </div>
+        <div class="mini">
+          <h3>Wine & Beer</h3>
+          <p>Curatie, trends, assortimentskeuzes. Het vak én de hobby (handig, ik weet het).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tagline" class="card pad" style="margin-top:18px">
+      <h2>Tagline</h2>
+      <p class="muted">
+        Daddy | Husband | Stuntman B.D. | A Human | Being | Rulebreaker | 2023 Survivor | Dick Dastardly and Muttley Enthusiast |
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Siegobert Jansen</div>
+      <div class="muted">GitHub Pages-ready. Geen Uncody-links. Geen formulier. Geen valse beloftes.</div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
